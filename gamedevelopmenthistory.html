@@ -4,27 +4,27 @@
 	<title>Winthrop Works - Homepage of Jonathan Winthrop Innes - UI Art/Design</title>
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
-	<script src="index.js"></script>
 	
 </head>
 <body>
-	<ul class="nav-bar" id="navbar">
-		<li><a href="index.html"><img src="images/logo_header_sitename.png" class="buttonimage" alt="Home"/></a></il>
-		<li><a href="gamedevelopmenthistory.html">Game Development</a></li>
-		<li><a href="personalart.html">Personal Art</a></li>
-		<!--drop down-->
-		<!-- <li class="navdropdown">
-			<a href="javascript:void(0)"><img class="buttonimage" src="images/ui_btn_Hamburger.png" alt="navigation drop down menu"/></a>
+	<div class="fixed-top nav-bar-background">
+		<a href="index.html"><img src="images/logo_header_sitename_sm.png" class="nav-bar-brand" alt="Home"/></a>
+		<div class="nav-bar-expanded">
+			<ul class="nav-bar">
+				<li><div class="button-disabled-nav">Game Development</div></li>
+				<li><a href="personalart.html" class="buttonprimaynav" >Personal Art</a></li>
+			</ul>
+		</div>
+		<li class="navdropdown">
+			<a href="javascript:void(0)"><img class="buttonhamburger" src="images/ui_btn_Hamburger.png" alt="navigation drop down menu"/></a>
 					<div class="navdropdown-content">
-					<a href="#">Link 1</a>
-					<a href="#">Link 2</a>
-					<a href="#">Link 3</a>
+					<a href=""  class="button-disabled-nav">Game Development</a>
+					<a href="personalart.html" class="buttonprimaynav">Personal Art</a>
 			</div>	
-		</li> -->
-	
-	</ul>
+		</li>
+	</div>
 
-<div>
+<div class="content">
 	<!--testing drop down-->
 	<div class="devhistorygrid-container">
 		<div class="devhistorygrid-one">
@@ -33,7 +33,7 @@
 				</h2>
 
 		</div>
-		<div class="devhistorygrid-two">
+		<div class="devhistorygrid-two blocktext">
 				Jonathan Winthrop Innes has been working on and releasing games for over a decade. 
 				<br />
 				<ul>

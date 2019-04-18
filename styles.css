@@ -1,67 +1,329 @@
+:root {
+	/* colours */
+	--blue: #007bff;
+	--indigo: #6610f2;
+	--purple: #6f42c1;
+	--pink: #e83e8c;
+	--red: #ee5f5b;
+	--orange: #fd7e14;
+	--yellow: #f89406;
+	--green: #62c462;
+	--teal: #20c997;
+	--cyan: #5bc0de;
+	--white: #e0f8d0;
+	--gray: #7A8288;
+	--gray-dark: #3A3F44;
+	--primary: #88c070;
+	--background: #081820;
+	--secondary: #e0f8d0;
+	--success: #62c462;
+	--info: #5bc0de;
+	--warning: #f89406;
+	--danger: #ee5f5b;
+	--light: #88c070;
+	--dark: #346856;
+	--navbarcolour: #081820;
+
+	/* retro colours */
+	--gameboydarkgreen: #081820;
+	--gameboymidgreen: #346856;
+	--gameboylightgreen: #88c070;
+	--gameboywhitegreen: #e0f8d0;
+	--pdp11Dark: #37252a;
+	--pdp11Black:	#171812;
+	--pdp11Magenta:	#782b3d;
+	--pdp11RoseLight:	#d55951;
+	--pdp11RoseDark:	#d1392c;
+
+	/* fonts */
+	
+}
+	/* basic */
+	
+body {
+	background-color: var(--background);
+	background-image: linear-gradient(to bottom right, #2e3444, #16171b); /* Standard syntax (must be last) */
+ 	color: white;
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+p {
+	color: var(--light);	
+}
+td {
+    border: 1px solid black;
+	color: white;
+}
+h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 3.0em;
+	text-align: center;
+	color: var(--light);
+}
+h2 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 2.0em;
+	text-align: center;
+	color: var(--light);
+}
+.container{
+	/* background-color: var(--dark); */
+	border: 2px solid var(--primary);
+	border-radius: 8px;
+	color: white;
+	padding: 0.5em 0.5em;
+}
+.containerhidden{
+	padding: 1em 1em;
+}
+.content{
+	padding: 64px 10px;
+}
+
+/* text styles */
+.blocktext{
+	background-color: var(--background);
+ 	color: var(--light);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 0.9375rem;
+	font-weight: 400;
+	line-height: 1.5;
+	padding: 0.5em 0.5em;
+}
+.slideshowtext{
+ 	color: var(--light);
+	font-family: 'Roboto', sans-serif;
+	font-size: 0.9375rem;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+}
+.warningtext{
+ 	color: var(--warning);
+	font-family: 'Roboto', sans-serif;
+	margin: 0;
+}
+
+/* fixed to top of screen */
+.fixed-top {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 1030;
+}
+
+/* images */
+.gameicon{
+	width: 64px;
+	height: 64px;
+}
+/* .hero-image {
+	background-image: url("images/bg_heroimage_01.png");
+	height: 680px;
+  background-position: center;
+  background-repeat: repeat-x;
+  background-size: cover;
+	position: relative;
+	image-rendering: pixelated;
+} */
+
+/* buttons */
+.buttonprimaynav {
+  background-color: var(--primary);
+	border-radius: 8px;
+	color: white;
+	padding: 12px 32px;
+  text-align: center;
+  font-size: 24px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.buttonprimaynav:hover {
+	background-color: var(--secondary); 
+	color: white;
+}
+
+.button-disabled-nav {
+  background-color: var(--gray-dark);
+	border-radius: 8px;
+	color: white;
+	padding: 12px 32px;
+  text-align: center;
+  font-size: 24px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.buttonprimaynav:disabled {
+	background-color: var(--gray-dark); 
+	color: white;
+}
+
+.nav-bar-brand {
+  opacity: 1;
+	width: auto;
+	padding: 4px 4px;
+	display: block;
+  height: 60px;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.buttonhamburger {
+  opacity: 1;
+	width: auto;
+	color: var(--primary);
+	padding: 4px 4px;
+	display: block;
+  height: 60px;
+  transition: .5s ease;
+	backface-visibility: hidden;
+}
+
+
 /* Navbar links */
+.nav-bar-background{
+	background-color: var(--navbarcolour);
+	display: flex;
+  flex-direction: row;
+}
 .nav-bar {
 	list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: visible;
-    display: inline-block;
-    width: 100%;
-    background-color: #1F232D;
-    position: -webkit-sticky; /* Safari */
-    position: sticky;
-	top: 0;
+	margin: 0;
+	padding: 0;
+	height: 60px;
+	width: 100%;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
 	z-index: 1;
-
+	display: flex;
+  flex-direction: row;
 }
-#navbar li {
-	float: left;
+.nav-bar-expanded{
+	margin-left: auto !important;
 }
-#navbar a {
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	font-size: 1em;
-	font-family: 'Roboto', sans-serif;
-	text-decoration: none;
-	padding: 20px 16px;
-}
-#navbar a.active {
-	text-decoration: none;
-  }
-#navbar a:hover {
-	background-color: #ddd;
-	color: #000000;
-}
-#navbar a:visited {
-	text-decoration: none;
-}
-
 
 /*drop down*/
 .navdropdown {
-	position: relative;
-	display: inline-block;
+	list-style-type: none;
+	margin-left: auto !important;
+	display: none;
 }
 
 .navdropdown-content {
-	
 	display: none;
- 	position: absolute;
-    background-color: #532727;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+	position: absolute;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	left:auto;
+	right:0;
+	margin-right:-10px;
 }
 .navdropdown-content a {
-	color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+	padding: 16px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
 }
 .navdropdown:hover .navdropdown-content{
 	display: block;
 }
+
+
+/*slide show on landing page*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+	background-color: #010608be;
+	border-radius: 16px;
+	padding: 0.5em 0.5em;
+  max-width: 500px;
+  position: relative;
+  margin: auto;
+}
+.slideshow-images{
+	display: block;
+	width: 200px;
+	height: 200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.activedot, .dot:hover {
+  background-color:var(--dark);
+}
+
+
+
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
 
 
 /* Animations */
@@ -119,6 +381,7 @@
 	animation-fill-mode: forwards;
 	animation-delay: 3s;
 }
+
 
 
 /* slide in from below */
@@ -221,14 +484,7 @@
 
 
 
-.buttonimage {
-  opacity: 1;
-  width: auto;
-  height: 60px;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  margin:-20px -16px;
-}
+
 
 /* elements */
 .dividerelement {
@@ -238,45 +494,21 @@
 	margin:0 auto;
 }
 
-.headerlogo {
-	width: auto;
-	height: 140px;
-}
-
-body {
-	background-color: #1d1f24;
-    background-image: linear-gradient(to bottom right, #2e3444, #16171b); /* Standard syntax (must be last) */
-	color: white;
-	font-family: Helvetica; 
-	margin: 0;
-}
-p {
-	color: #baad8e;	
-}
-td {
-    border: 1px solid black;
-	color: white;
-}
-h1 {
-	font-family: Helvetica;
-	font-size: 3.0em;
-	text-align: center;
-	color: #baad8e;
-}
-h2 {
-	font-family: Helvetica;
-	font-size: 2.0em;
-	text-align: center;
-	color: #e2dbca;
-}
-
-
-
-
 
 
 /* responsive design */
-@media screen and (orientation:portrait) {
+@media screen and (max-width:768px) {
+/*disable nav buttons*/
+	.buttonprimaynav {
+		display: none;
+	}
+	.button-disabled-nav {
+		display: none;
+	}
+	.navdropdown {
+		display: block;
+	}
+
 /* Portrait styles */
 	.landingpagegrid-container {
 		grid-template-columns: auto;

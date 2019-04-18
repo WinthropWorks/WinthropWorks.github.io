@@ -1,9 +1,38 @@
-// When the user scrolls the page, execute Function 
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-// function navbarsticky() {
-//     if (window.pageYOffset >= sticky) {
-//     navbar.classList.add("sticky")
-//     } else {
-//     navbar.classList.remove("sticky");
-//     }
-// }
+var slideIndex = 0;
+
+
+function showSlides() {
+    var slides = document.querySelectorAll(".mySlides");
+    var dots = document.getElementsByClassName("dot");
+
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+        slideIndex = 1;
+    }
+    for (var i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" activedot", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " activedot";
+
+}
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function dotClickHandler(e) {
+clearInterval(intervalId);
+    var activeDotIndex = this.getAttribute("slideDot");
+    slideIndex = activeDotIndex - 1;
+    showSlides();
+    intervalId =  setInterval(showSlides, 3000);
+}
+var dotNode = document.getElementsByClassName("dot");
+for (var i=0;i<dotNode.length;i++) {
+    dotNode[i].addEventListener("click", dotClickHandler);
+}
+
+var intervalId =  setInterval(showSlides, 3000);
