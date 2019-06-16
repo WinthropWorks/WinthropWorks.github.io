@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:700" rel="stylesheet">
 	<script src="index.js"></script>
+	<script src="compairimages.js"></script>
 </head>
 <body>
 <!-- header buttons --> 
@@ -104,11 +105,33 @@
 			</div>
 		</div> 	
 	</div>
-	
+<!-- ux/i -->
+<br>
+	<!-- <div style="width: 80%; margin: 0 auto">
+		<div id="inked-painted">
+			<img src="images/mockup_ux_01.png" id="inked" alt>
+			<div id="colored"></div>
+	</div> -->
+<!-- end to content	 -->
 </div>
 
 <script>
 	showSlides();
+	// initComparisons();
+var inkbox = document.getElementById("inked-painted");
+var colorbox = document.getElementById("colored");
+var fillerImage = document.getElementById("inked");
+// uncommet below for the side by side
+// inkbox.addEventListener("mousemove",trackLocation,false);
+// inkbox.addEventListener("touchstart",trackLocation,false);
+// inkbox.addEventListener("touchmove",trackLocation,false);
+
+// function trackLocation(e)
+// {
+// 	var rect = fillerImage.getBoundingClientRect();
+// 	var position = ((e.pageX - rect.left) / fillerImage.offsetWidth)*100;
+// 	if (position <= 100) { colorbox.style.width = position+"%"; }
+// }
 </script>
 
 </body>

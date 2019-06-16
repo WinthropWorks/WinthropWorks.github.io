@@ -36,3 +36,5 @@ for (var i=0;i<dotNode.length;i++) {
 }
 
 var intervalId =  setInterval(showSlides, 3000);
+
+
